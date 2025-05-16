@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conteo SERAP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Anotador del Comedor</h1>
+
+  <form id="formulario">
+    <label for="matricula">Matrícula:</label>
+    <input type="text" id="matricula" name="matricula" required />
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{9}" placeholder="Ej: 099123456" />
+
+    <button type="submit">Solicitar código</button>
+  </form>
+
+  <div id="verificacion" style="display: none;">
+    <label for="codigo">Código de verificación:</label>
+    <input type="text" id="codigo" name="codigo" required />
+    <button id="verificar">Verificar y Anotarse</button>
+  </div>
+
+  <div id="mensaje"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
